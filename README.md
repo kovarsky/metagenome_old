@@ -1,4 +1,4 @@
 metagenome
 ==========
 
-My metagenome processing tools
+My metagenome processing scripts
