@@ -134,7 +134,6 @@ class BunchOfObjects(CrossHeterogenity.BunchOfObjects):
 		#	self.cross_cov[i][self.refnum] += 1
 		#	self.cross_distance[i][self.refnum] += (maxes[i] != self.bunch[i].ref_index)
 		for i in self.indices:
-			# print 'freqs%d: %s' % (i, self.bunch[i].freqs)
 			self.bunch[i].readline()
 
 		return(len(procindices) > 0 and counts[2] >= occtreshold)
@@ -144,10 +143,6 @@ class BunchOfObjects(CrossHeterogenity.BunchOfObjects):
 		for cover in self.diversity.keys():
 			f.write('%d\t%f\t%d\n' % (cover, self.diversity[cover], self.covers[cover]))
 		f.close()
-		#np.savetxt('%s/cross_diffs_%s.out' % (directory, suffix), self.cross_distance, delimiter='\t',fmt='%.1f')
-		#np.savetxt('%s/cross_cov_%s.out' % (directory, suffix), self.cross_cov, delimiter='\t',fmt='%.1f')
-		#np.savetxt('%s/cov_%s.out' % (directory, suffix), self.cov, delimiter='\t',fmt='%.1f')
-
 
 def main():
 	plistname = sys.argv[1]
